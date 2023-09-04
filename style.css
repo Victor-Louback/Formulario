@@ -1,0 +1,254 @@
+:root {
+    --branco: #FFFFFF;
+    --laranja-claro: #F37B36;
+    --laranja-escuro: #EE4328;
+    --beje-claro: #F9DCA7;
+    --beje-escuro: #FFCC73;
+    --verde: #269045;
+    --marrom: #3F271D;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    color: var(--marrom);
+}
+
+body {
+    background: var(--beje-escuro);
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+.col-6 {
+    background-color: var(--beje-claro);
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    /* Aumenta o tamanho da coluna que sobra */
+    transition: flex-grow 0.5s;
+    /* Adiciona uma transição suave para o aumento de tamanho */
+}
+
+.col-6:hover {
+    flex-grow: 2;
+    /* Aumenta o tamanho da coluna em 2 vezes quando passa o mouse por cima */
+}
+
+.form {
+    background: var(--branco);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.d-none {
+    padding-top: 50px;
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+.img-fluid {
+    padding-top: 70px;
+}
+
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-button button {
+    border: none;
+    background-color: var(--laranja-escuro);
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button button:hover {
+    background-color: var(--laranja-claro);
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--branco);
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: var(--laranja-escuro);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+    position: relative;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+    background: var(--beje-claro);
+}
+
+.input-box input:hover {
+    background-color: var(--beje-escuro);
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid var(--marrom);
+}
+
+.input-box label,
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.input-box input::placeholder {
+    color: var(--marrom);
+}
+
+.gender-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 .5rem;
+}
+
+.gender-input {
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input {
+    margin-right: 0.35rem;
+}
+
+.gender-input label {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: var(--marrom);
+}
+
+.input-box i {
+    position: absolute;
+    right: 10px;
+    top: 52px;
+    transform: translateY(-50%);
+    visibility: hidden;
+}
+
+.input-box small {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    visibility: hidden;
+}
+
+.continue-button button {
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: var(--laranja-escuro);
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover {
+    background-color: var(--laranja-claro);
+}
+
+.continue-button button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: var(--branco);
+}
+
+.gender-input input[type="radio"] {
+    -webkit-appearance: none;
+    /* Remove a aparência padrão do navegador (Webkit) */
+    -moz-appearance: none;
+    /* Remove a aparência padrão do navegador (Firefox) */
+    appearance: none;
+    /* Remove a aparência padrão do navegador */
+    width: 16px;
+    /* Define a largura da bolinha */
+    height: 16px;
+    /* Define a altura da bolinha */
+    border-radius: 50%;
+    /* Torna a bolinha circular */
+    border: 2px solid #269045;
+    /* Cor da borda da bolinha */
+    background-color: white;
+    /* Cor de fundo da bolinha (branca) */
+    margin-right: 5px;
+    /* Espaçamento à direita da bolinha */
+}
+
+/* Estilizando a bolinha quando estiver selecionada */
+.gender-input input[type="radio"]:checked {
+    background-color: #269045;
+    /* Mude a cor de fundo quando selecionado */
+}
+
+/*erro e sucesso*/
+.sucesso input {
+    border: 1px solid var(--verde);
+}
+
+.erro input {
+    border: 1px solid var(--laranja-escuro);
+}
+
+.sucesso .fa-circle-check{
+    color: var(--verde);
+    visibility: visible;
+}
+
+.erro .fa-circle-exclamation{
+    color: var(--laranja-escuro);
+    visibility: visible;
+}
+
+.erro small{
+    color: var(--laranja-escuro);
+    visibility: visible;
+}

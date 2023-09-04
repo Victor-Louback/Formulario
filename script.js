@@ -1,0 +1,7 @@
+const form = document.getElementById('form')
+const nome = document.getElementById('firstname')
+const sobrenome = document.getElementById('lastname')
+const email = document.getElementById('email')
+const numero = document.getElementById('number')
+const senha = document.getElementById('password')
+const confirmar_senha = document.getElementById('confirmPassword')
