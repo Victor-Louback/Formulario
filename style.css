@@ -15,7 +15,7 @@
 }
 
 body {
-    background: var(--beje-escuro);
+    background: var(--beje-claro);
     display: flex;
     align-items: center;
     min-height: 100vh;
@@ -30,7 +30,7 @@ body {
 }
 
 .col-6 {
-    background-color: var(--beje-claro);
+    background-color: var(--marrom);
     padding-top: 1vh;
     padding-bottom: 1vh;
     display: flex;
@@ -252,3 +252,11 @@ body {
     color: var(--laranja-escuro);
     visibility: visible;
 }
+
+
+@media (max-width: 500px) {
+    .gender-group {
+      display: block;
+    }
+  }
+  
