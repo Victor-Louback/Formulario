@@ -131,6 +131,11 @@ body {
     background: var(--beje-claro);
 }
 
+.input-box input {
+    padding-left: 5px;
+    padding-right: 30px;
+}
+
 .input-box input:hover {
     background-color: var(--beje-escuro);
 }
