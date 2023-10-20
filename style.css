@@ -49,7 +49,6 @@ body {
 
 .col-6:hover {
     flex-grow: 2;
-    /* Aumenta o tamanho da coluna em 2 vezes quando passa o mouse por cima */
 }
 
 .form {
@@ -214,29 +213,19 @@ body {
 
 .gender-input input[type="radio"] {
     -webkit-appearance: none;
-    /* Remove a aparência padrão do navegador (Webkit) */
     -moz-appearance: none;
-    /* Remove a aparência padrão do navegador (Firefox) */
     appearance: none;
-    /* Remove a aparência padrão do navegador */
     width: 16px;
-    /* Define a largura da bolinha */
     height: 16px;
-    /* Define a altura da bolinha */
     border-radius: 50%;
-    /* Torna a bolinha circular */
     border: 2px solid #269045;
-    /* Cor da borda da bolinha */
     background-color: white;
-    /* Cor de fundo da bolinha (branca) */
     margin-right: 5px;
-    /* Espaçamento à direita da bolinha */
 }
 
 /* Estilizando a bolinha quando estiver selecionada */
 .gender-input input[type="radio"]:checked {
     background-color: #269045;
-    /* Mude a cor de fundo quando selecionado */
 }
 
 /*erro e sucesso*/
